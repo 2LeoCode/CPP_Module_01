@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 19:15:14 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/11 20:16:37 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/01/13 16:37:31 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ class Logger
 	}
 	inline void		logToFile(std::string const &msg)
 	{
-		*_file << msg << std::endl;
+		_file << msg << std::endl;
 	}
 	std::string		makeLogEntry(std::string const &msg);
 
-	std::ofstream	*_file;
+	std::ofstream	_file;
 };
 
 typedef void		(Logger::*method_ft)(std::string const &);

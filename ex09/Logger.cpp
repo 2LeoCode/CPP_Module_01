@@ -6,28 +6,27 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 19:15:16 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/11 20:30:09 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/01/13 16:38:28 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Logger.hpp"
 
-Logger::Logger(std::string const & dest, std::string const & message) : _file(new std::ofstream)
+Logger::Logger(std::string const & dest, std::string const & message)
 {
 	bool		method = !dest.compare("console");
 	method_ft	log_method[2] = {&Logger::logToFile, &Logger::logToConsole};
 	method_ft	ft = log_method[method];
 
 	if (!method)
-		_file->open(dest, std::ofstream::app);
+		_file.open(dest, std::ofstream::app);
 	(this->*ft)(makeLogEntry(message));
-	if (_file->is_open())
-		_file->close();
+	if (_file.is_open())
+		_file.close();
 }
 
 Logger::~Logger(void)
 {
-	delete _file;
 }
 
 std::string		Logger::makeLogEntry(std::string const & msg)
