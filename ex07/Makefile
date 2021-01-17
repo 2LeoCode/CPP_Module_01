@@ -23,7 +23,7 @@ $(NAME): $(OBJ)
 
 %.o: %.cpp
 	@(\
-		printf '\033[2KCompiling $<';\
+		printf '\033[2K\rCompiling $<';\
 		clang++ $(CFLAGS) -c $< -o $@\
 	)
 
