@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 11:01:04 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/09 22:13:06 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:31:40 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void							Zombie::advert(void)
 
 template <typename type> type	randBetween(type a, type b)
 {
-	return (a + (type)std::rand() % (b - a + 1));
+	return (a + static_cast<type>(std::rand() % (b - a + 1)));
 }
 
 std::string						randBetweenStrings(int ac, ...)

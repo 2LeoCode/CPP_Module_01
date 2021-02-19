@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 17:43:47 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/08 22:26:27 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:28:04 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Pony::Pony(void)
 	out	<< "====================" << std::endl
 		<< "CREATE Pony " << id << std::endl
 		<< "====================" << std::endl
-		<< "AGE\t\t\t" << c_age << std::endl
+		<< "AGE\t\t" << c_age << std::endl
 		<< "COLOR\t\t" << c_color << std::endl
 		<< "GENDER\t\t" << (c_gender ? "FEMALE" : "MALE") << std::endl
 		<< "JUMP HEIGHT\t" << c_jumpHeight << std::endl
@@ -147,7 +147,7 @@ std::string		randBetweenStrings(int ac, ...)
 
 inline bool		randBool(void)
 {
-	return ((bool)(std::rand() % 2));
+	return (static_cast<bool>(std::rand() % 2));
 }
 
 inline int		randBetween(int a, int b)

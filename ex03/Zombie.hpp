@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 23:51:43 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/10 15:50:19 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:39:35 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ class Zombie
 
 	private:
 
-	int				_life;
-	std::string		_name;
 	zombieType		_type;
+	std::string		_name;
+	int				_life;
 };
 
 namespace rdm

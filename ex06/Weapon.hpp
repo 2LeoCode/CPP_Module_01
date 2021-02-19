@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 18:24:26 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/10 19:21:30 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:55:10 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,8 @@
 namespace ft
 {
 	std::string					strcapitalize(std::string &s);
-	inline void					toupper(char &c)
-	{
-		c -= 32 * islower(c);
-	}
-	inline bool					islower(char c)
-	{
-		return ((c >= 'a') && (c <= 'z'));
-	}
+	inline void					toupper(char &c) { c -= 32 * islower(c); }
+	inline bool					islower(char c) { return ((c >= 'a') && (c <= 'z')); }
 }
 
 class Weapon
@@ -35,14 +29,8 @@ class Weapon
 	Weapon(std::string type);
 	~Weapon(void);
 
-	inline const std::string	&getType(void)
-	{
-		return (_type);
-	}
-	inline void					setType(std::string newType)
-	{
-		_type = ft::strcapitalize(newType);
-	}
+	inline const std::string &getType(void) const { return (_type); }
+	inline void setType(std::string newType) { _type = ft::strcapitalize(newType); }
 
 
 	private:

@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 15:48:57 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/10 17:05:12 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:52:23 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,7 @@ class Brain
 	~Brain(void);
 
 	std::string				identify(void) const;
-	inline std::uint32_t	getNeurons(void) const
-	{
-		return (_neurons);
-	}
+	inline std::uint32_t	getNeurons(void) const { return (_neurons); }
 
 
 	private:

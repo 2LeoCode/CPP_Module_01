@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 19:31:07 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/11 13:18:32 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:57:22 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int		main(int argc, char **argv)
 	if (!(flags & IFLAG))
 		outputFileName.append(".replace");
 	input.seekg(0, input.end);
-	buf = new char[fileSize = ((int)input.tellg() + 1)];
+	buf = new char[fileSize = (static_cast<int>(input.tellg()) + 1)];
 	input.seekg(0, input.beg);
 	input.read(buf, fileSize);
 	buf[fileSize] = 0;

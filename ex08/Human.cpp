@@ -6,28 +6,13 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 13:41:41 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/11 18:14:22 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:59:40 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Human.hpp"
 
-void	Human::meleeAttack(std::string const & target)
-{
-	std::cout << "Attacked " << target << " with melee." << std::endl;
-}
-
-void	Human::rangedAttack(std::string const & target)
-{
-	std::cout << "Attacked " << target << " with ranged." << std::endl;
-}
-
-void	Human::intimidatingShout(std::string const & target)
-{
-	std::cout << "Intimidated " << target << " with a terrible shout." << std::endl;
-}
-
-void	Human::action(std::string const & action_name, std::string const & target)
+void	Human::action(std::string const & action_name, std::string const & target) const
 {
 	std::string		actionNameList[3] = ACTION_STR;
 	method_function actionPtr[3] = ACTION_PTR;

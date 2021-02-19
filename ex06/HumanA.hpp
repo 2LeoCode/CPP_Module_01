@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 18:24:12 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/10 19:22:24 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:52:57 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,7 @@ class HumanA
 	HumanA(std::string name, Weapon &weapon);
 	~HumanA(void);
 
-	inline void		attack(void)
-	{
-		std::cout << _name << " attacks with his " << _weapon.getType() << std::endl;
-	}
+	inline void		attack(void) { std::cout << _name << " attacks with his " << _weapon.getType() << std::endl; }
 
 
 	private:

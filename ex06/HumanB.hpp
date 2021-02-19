@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 18:24:21 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/10 19:22:56 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/02/19 20:53:40 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ class HumanB
 	~HumanB(void);
 
 	void			attack(void);
-	inline void		setWeapon(Weapon &weapon)
-	{
-		_weapon = &weapon;
-	}
+	inline void		setWeapon(Weapon &weapon) { _weapon = &weapon; }
 
 
 	private:
